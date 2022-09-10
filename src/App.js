@@ -1,5 +1,11 @@
+import { Login } from "./components/Login";
+
 function App() {
-  return <>My App</>;
+  return (
+    <>
+      <Login />
+    </>
+  );
 }
 
 export default App;
