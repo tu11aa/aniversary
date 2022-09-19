@@ -1,0 +1,3 @@
+https://codesandbox.io/s/gift-box-css-forked-sbxd5v?file=/src/GiftBoxAnimation.js
+https://www.youtube.com/watch?v=JP-HhwtjFtc&t=77s
+https://github.com/ErAdityaJain/birthday-templates
