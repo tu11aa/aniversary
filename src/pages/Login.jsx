@@ -14,18 +14,18 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (userName === sampleUsername && password === samplePassword) navigate("/home")
-    else toast.warn("Wrong user name or password")
+    if (userName === sampleUsername && password === samplePassword) navigate("/screen1")
+    else toast.error("Sai gùi liu liu")
   }
 
   return (
     <div className="container">
       <form>
-        <p>Welcome</p>
+        <p>Hé lu ngiu</p>
         <input type="email" placeholder="User name" value={userName} onChange={(e)=>{setUserName(e.target.value)}}/><br/>
         <input type="password" placeholder="Password" value={password} onChange={(e)=>{setPassword(e.target.value)}}/><br/>
-        <input type="submit" value="Sign in"  onClick={handleSubmit}/><br/>
-        <Link to="/forgotpassword">Forgot Password?</Link><br/>
+        <input type="submit" value="Lét gô"  onClick={handleSubmit}/><br/>
+        <Link to="/forgotpassword">Cho tí gợi ý nè</Link><br/>
       </form>
 
       <div className="drops">
