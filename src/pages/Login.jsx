@@ -19,13 +19,13 @@ const Login = () => {
   }
 
   return (
-    <div className="container">
+    <div className="containerLogin">
       <form>
         <p>Hé lu ngiu</p>
         <input type="email" placeholder="User name" value={userName} onChange={(e)=>{setUserName(e.target.value)}}/><br/>
         <input type="password" placeholder="Password" value={password} onChange={(e)=>{setPassword(e.target.value)}}/><br/>
         <input type="submit" value="Lét gô"  onClick={handleSubmit}/><br/>
-        <Link to="/forgotpassword">Cho tí gợi ý nè</Link><br/>
+        <Link to="/hint">Cho tí gợi ý nè</Link><br/>
       </form>
 
       <div className="drops">
