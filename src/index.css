@@ -99,3 +99,26 @@ body {
     bottom: 20em;
   }
 }
+
+.pageHeader {
+  overflow-y: hidden;
+  font-family: 'Great Vibes', cursive;
+  line-height: 3rem;
+  text-decoration: underline overline solid #333;
+  letter-spacing: 3.5px;
+  font-weight: bolder;
+}
+
+.hintP {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.8rem;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  word-spacing: 0.4rem;
+  letter-spacing: 0.08rem;
+  /* padding-top: 1rem; */
+  /* padding-bottom: 2rem; */
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
