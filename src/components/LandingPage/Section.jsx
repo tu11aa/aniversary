@@ -1,12 +1,11 @@
 import React from 'react'
-import { useEffect } from 'react'
 import { LightSpeed } from 'react-reveal'
 
-const Section = (props) => {
-  const {header, paragraph} = props
+const Section = (props) => {    
+  const {header, paragraph, backgroundID} = props
 
   return (
-    <div className='hintSection'>
+    <div id={backgroundID} className='hintSection'>
       <LightSpeed left>  
         <h2 className='pageHeader'>{header}</h2>
       </LightSpeed>
