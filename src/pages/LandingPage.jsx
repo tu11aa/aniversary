@@ -1,5 +1,5 @@
 import React from 'react'
-import Chat from '../components/LandingPage/Chat'
+import ChatBox from '../components/LandingPage/ChatBox'
 import Section from '../components/LandingPage/Section'
 
 const LandingPage = () => {
@@ -8,10 +8,11 @@ const LandingPage = () => {
   ]
 
   return (
-    <>
-      <Chat/>
+    <div className='hint-container'>
+      <ChatBox/>
       <Section backgroundID="bg-image1" header="Amazing you" paragraph={paragraphs[0]}/>
-    </>
+      <Section backgroundID="bg-image1" header="Amazing you" paragraph={paragraphs[0]}/>
+    </div>
   )
 }
 

@@ -2,13 +2,24 @@
 
 body {
   text-align: center;
+  overflow: hidden;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  box-sizing: border-box;
   background: linear-gradient(45deg, #fc466b, #3f5efb);
-  height: 100vh;
   font-family: "Montserrat", sans-serif;
+  height: 100vh;
 }
+
+.hint-container { 
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.hint-container::-webkit-scrollbar {
+  display: none;
+}
+
 
 .box {
   background: transparent;
@@ -187,6 +198,8 @@ body {
   min-height: 20px;
   background: white;
   border-radius: 4px 20px 20px 4px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .message-group-sent {
@@ -208,6 +221,8 @@ body {
   min-height: 20px;
   padding: 10px;
   margin-left: auto;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .message-sent:first-child > .message-sent-text {
