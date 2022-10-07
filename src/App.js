@@ -3,6 +3,7 @@ import Login from "./pages/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import LandingPage from "./pages/LandingPage";
+import FlippingPage from "./pages/FlippingPage";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/hint" element={<LandingPage />} />
+        <Route path="/screen1" element={<LandingPage />} />
+        <Route path="/hint" element={<FlippingPage />} />
       </Routes>
       <ToastContainer autoClose={2000} />
     </BrowserRouter>
