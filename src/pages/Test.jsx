@@ -1,75 +1,70 @@
 import {  useState } from "react";
 
 const Test = () => {
+    //re-render he he he
+    const [re_render, setRender] = useState(true)
+    const _render = () => setRender(prev => !prev)
+    
+    const codeType = {
+        comments : "comments",
+        space : "space",
+        keyword: "keyword",
+        string : "string",
+    }
+
     const initialState = {
-        plainCode : [
+        plainCodeLines : [
             "This is first line",
             "This is second line",
             "This is third line"
         ],
-        code : []
+        types : [codeType.string, codeType.string, codeType.string],
+        codeLines : [],
     }
 
-    const [code, setCode] = useState(initialState)
+    const [code] = useState(()=>{
+        const newPlainCodeLine = initialState.plainCodeLines.map(codeLine => codeLine.split(""))
+        return {...initialState, plainCodeLines : newPlainCodeLine}
+    })
 
-    const texts = [
-        "This is first line",
-        "This is second line",
-        "This is third line"
-    ]
-    const [codes, setCodes] = useState([])
-
-    const countString = (letter, str) => {
-        const re = new RegExp(letter, 'g');
-        return str.match(re).length;
-    }
-
-    const handleClick = (e) => {
-        if (e.target.innerText !== "Started") {
-            e.target.innerText = "Started"
-
-            let i = 0
-            const mainLoop = setInterval(async () => {
-                if (i >= texts.length) return clearInterval(mainLoop)
-                await letGo(texts[i], i)
-                i++
-            }, 1000 * countString(" ", texts[i]));
-            // texts.forEach(async (text, index)=>{
-            //     await letGo(text, index)
-            // })
-        }
-        else {
-            console.log(codes)
+    const runCode = () => {
+        for (let i = 0; i < code.plainCodeLines.length; i++) {
+            if (code.plainCodeLines[i].length > 0){
+                if (code.codeLines.length === i) {
+                    //first add
+                    code.codeLines.push(code.plainCodeLines[i][0])
+                    _render()
+                }
+                else {
+                    //add plainCodeLine to codeLine
+                    code.codeLines[i] += code.plainCodeLines[i][0]
+                    _render()
+                }
+                //delete code.plainCodeLines[i][0]
+                code.plainCodeLines[i].shift()
+                break
+            }
         }
     }
 
-    const letGo = async (text, index) => {
-        const wordList = text.split(" ")
-        // codes.push(wordList[0])
-        setCodes(pre => [...pre, wordList[0]])
-
-        let i = 1
+    const handleClick = () => {
         const loop = setInterval(() => {
-            if (i >= wordList.length) return clearInterval(loop)
-            // codes[index] += " " + wordList[i++]
-            setCodes(prevCodes => (prevCodes.map((code, j) => 
-                j === i ? code + " " + wordList[i] : code
-            )))
-            i++
-        }, 1000);
+            runCode()
+            if (code.plainCodeLines[code.plainCodeLines.length - 1].length === 0) clearInterval(loop)
+        }, 150);
     }
 
     return (
         <>
-            <button onClick={handleClick}>Click me</button>
-            {codes.length === 0 ? <h1>Empty code</h1> : 
+            {code.codeLines.length === 0 ? <h1>Empty code</h1> : 
                 <>
-                    {codes.map((code, index)=>(
-                        <h1 key={index}>{code}</h1>
+                    {code.codeLines.map((codeLine, index)=>(
+                        <span key={index} className={code.types[index]}>{codeLine}</span>
+                        //need ajust hear (breakline)
                     ))}
                 </>
             }
-            <h1>This is a test</h1>
+            <button onClick={handleClick}>Log code object</button>
         </>
     );
 }
