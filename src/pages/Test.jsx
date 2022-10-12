@@ -1,15 +1,17 @@
+import { useEffect } from "react";
 import {  useState } from "react";
 
 const Test = () => {
     //re-render he he he
-    const [re_render, setRender] = useState(true)
-    const _render = () => setRender(prev => !prev)
+    const [re_render, setRender] = useState(0)
+    const _render = () => setRender(re_render => re_render + 1)
     
     const codeType = {
         comments : "comments",
         space : "space",
         keyword: "keyword",
         string : "string",
+        none : null
     }
 
     const initialState = {
@@ -18,7 +20,8 @@ const Test = () => {
             "This is second line",
             "This is third line"
         ],
-        types : [codeType.string, codeType.string, codeType.string],
+        types : [codeType.keyword, codeType.string, codeType.string],
+        isBreak : [true, false, false],
         codeLines : [],
     }
 
@@ -47,24 +50,30 @@ const Test = () => {
         }
     }
 
-    const handleClick = () => {
-        const loop = setInterval(() => {
-            runCode()
-            if (code.plainCodeLines[code.plainCodeLines.length - 1].length === 0) clearInterval(loop)
-        }, 150);
+    const creatCodeLine = (codeLine, index)=> {
+        return !code.isBreak[index] ? <span key={index} className={code.types[index]}>{codeLine}</span> :
+        <span key={index} className={code.types[index]}>{codeLine}<br/></span>
     }
+
+    //inittial run
+    useEffect(() => {
+        if (re_render === 0) {
+            const loop = setInterval(() => {
+                runCode()
+                if (code.plainCodeLines[code.plainCodeLines.length - 1].length === 0) clearInterval(loop)
+            }, 150);
+        }
+    }, [])
+    
 
     return (
         <>
             {code.codeLines.length === 0 ? <h1>Empty code</h1> : 
-                <>
-                    {code.codeLines.map((codeLine, index)=>(
-                        <span key={index} className={code.types[index]}>{codeLine}</span>
-                        //need ajust hear (breakline)
-                    ))}
-                </>
+                <div id="code">
+                    {code.codeLines.map(creatCodeLine)}
+                </div>
             }
-            <button onClick={handleClick}>Log code object</button>
+            <button onClick={()=>console.log(re_render)}>Log re-render</button>
         </>
     );
 }
