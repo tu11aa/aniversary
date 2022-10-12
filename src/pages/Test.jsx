@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import {  useState } from "react";
+import { useEffect,  useState } from "react";
+import guitarboy from "../assets/guitarboy.gif"
 
 const Test = () => {
     //re-render he he he
@@ -16,12 +16,21 @@ const Test = () => {
 
     const initialState = {
         plainCodeLines : [
-            "This is first line",
-            "This is second line",
-            "This is third line"
+            "/**",
+            " ", "* Today, the 10th day of July, is your birthday.",
+            " ", "* So I created a webpage to celebrate this special day.",
+            "Girl u = ", "new ", "Girl(", `"Girl"`, ");",
         ],
-        types : [codeType.keyword, codeType.string, codeType.string],
-        isBreak : [true, false, false],
+        types : [codeType.comments, 
+            codeType.space, codeType.comments, 
+            codeType.space, codeType.comments,
+            codeType.none, codeType.keyword, codeType.none, codeType.string, codeType.none,
+        ],
+        isBreak : [true, 
+            false, true, 
+            false, true,
+            false, false, false, false, true,
+        ],
         codeLines : [],
     }
 
@@ -67,14 +76,15 @@ const Test = () => {
     
 
     return (
-        <>
+        <div style={{display: "inline-block", background : "white", marginTop: "1%"}}>
             {code.codeLines.length === 0 ? <h1>Empty code</h1> : 
                 <div id="code">
                     {code.codeLines.map(creatCodeLine)}
                 </div>
             }
-            <button onClick={()=>console.log(re_render)}>Log re-render</button>
-        </>
+            {/* <button onClick={()=>console.log(re_render)}>Log re-render</button> */}
+            <img src={guitarboy} style={{marginTop: "3%"}} alt="guitar boy"/>
+        </div>
     );
 }
 
