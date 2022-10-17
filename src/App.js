@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import LandingPage from "./pages/LandingPage";
 import FlippingPage from "./pages/FlippingPage";
 import Test from "./pages/Test";
+import HappyAniPage from "./pages/HappyAniPage";
+import Album from "./pages/Album";
 
 function App() {
   return (
@@ -12,9 +14,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/screen1" element={<LandingPage />} />
         <Route path="/hint" element={<FlippingPage />} />
-        <Route path="/test" element={<Test />} />
+        <Route path="/screen1" element={<LandingPage />} />
+        <Route path="/screen2" element={<HappyAniPage />} />
+        <Route path="/screen3" element={<Album />} />
       </Routes>
       <ToastContainer autoClose={2000} />
     </BrowserRouter>

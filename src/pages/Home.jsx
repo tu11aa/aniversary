@@ -45,13 +45,14 @@ const Home = () => {
       <Confetti open={jump === "jump"}/>
       <div className="img-container">
         <img className={`kuku ${jump}`} src={kuku} alt="kuku" />
-        <button className="box" onClick={() => handleClick()}>
+        <button className="box" onClick={handleClick}>
           <img src={box} alt="box" />
         </button>
         <img
           className={`lid move ${rotating} ${rotated}`}
           src={boxLid}
           alt="box-lid"
+          onClick={handleClick}
         />
       </div>
     </>
