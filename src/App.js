@@ -18,6 +18,7 @@ function App() {
         <Route path="/screen1" element={<LandingPage />} />
         <Route path="/screen2" element={<HappyAniPage />} />
         <Route path="/screen3" element={<Album />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
       <ToastContainer autoClose={2000} />
     </BrowserRouter>

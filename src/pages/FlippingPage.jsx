@@ -5,23 +5,23 @@ const FlippingPage = () => {
   const navigate = useNavigate()
 
   return (
-    <div class="card">
-      <div class="outside">
-        <div class="front">
+    <div className="card">
+      <div className="outside">
+        <div className="front">
           <p>Happy Anniversary</p>
-          <div class="cake">
-            <div class="candle" style={{left:"70px"}}></div>
-            <div class="candle" ></div>
-            <div class="candle" style={{right:"70px"}}></div>
-            <div class="top-layer"></div>
-            <div class="middle-layer"></div>
-            <div class="bottom-layer"></div>
+          <div className="cake">
+            <div className="candle" style={{left:"70px"}}></div>
+            <div className="candle" ></div>
+            <div className="candle" style={{right:"70px"}}></div>
+            <div className="top-layer"></div>
+            <div className="middle-layer"></div>
+            <div className="bottom-layer"></div>
           </div>
         </div>
-        <div class="back"></div>
+        <div className="back"></div>
       </div>
-      <div class="inside">
-        <p>Tên đăng nhập là liên quan tui với ngiu á</p>
+      <div className="inside">
+        <p>Tên đăng nhập tên tui cộng với ngiu é</p>
         <p>Còn mật khẩu thì quen thuộc lúm, tự mò ik hía hía</p>
         <h1 onClick={()=>navigate("/login")}>&#127873;</h1>
       </div>

@@ -1,16 +1,26 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import "../css/login.scss"
 import 'react-toastify/dist/ReactToastify.css';
+import { useSelector, useDispatch } from 'react-redux'
+import { addRoute } from '../feature/routesSlice';
+import { useEffect } from 'react';
+
 
 const Login = () => {
+  const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  const sampleUsername = "Tu"
-  const samplePassword = "12345"
+  const routes = useSelector(state => state.routes)
+  const location = useLocation()
+
+  const sampleUsername = "TuNgan"
+  const samplePassword = "24122002"
   const [userName, setUserName] = useState("")
   const [password, setPassword] = useState("")
+
+  useEffect(() => {dispatch(addRoute(location.pathname))}, [])
 
   const handleSubmit = (e) => {
     e.preventDefault()
