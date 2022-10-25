@@ -12,8 +12,8 @@ const Album = () => {
     }))
 
     return <div>
-        <ImageGallery items={images} infinite={true} showThumbnails={false}/>
-        <button onClick={()=>console.log(importAll(r))}>Demo</button>
+        <ImageGallery  autoPlay={true} items={images} infinite={true} showThumbnails={false}/>
+        {/* <button onClick={()=>console.log(importAll(r))}>Demo</button> */}
     </div>
 }
 

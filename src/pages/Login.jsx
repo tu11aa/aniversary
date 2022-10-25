@@ -3,7 +3,7 @@ import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import "../css/login.scss"
 import 'react-toastify/dist/ReactToastify.css';
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addRoute } from '../feature/routesSlice';
 import { useEffect } from 'react';
 
@@ -12,7 +12,6 @@ const Login = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
-  const routes = useSelector(state => state.routes)
   const location = useLocation()
 
   const sampleUsername = "TuNgan"
@@ -20,13 +19,16 @@ const Login = () => {
   const [userName, setUserName] = useState("")
   const [password, setPassword] = useState("")
 
-  useEffect(() => {dispatch(addRoute(location.pathname))}, [])
-
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (userName === sampleUsername && password === samplePassword) navigate("/screen1")
+    if (userName === sampleUsername && password === samplePassword) {
+      localStorage.setItem("isLogin", true)
+      navigate("/screen1")
+    }
     else toast.error("Sai gùi liu liu")
   }
+
+  useEffect(() => {dispatch(addRoute(location.pathname))}, [])
 
   return (
     <div className="containerLogin">

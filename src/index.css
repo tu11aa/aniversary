@@ -113,46 +113,97 @@ body {
   }
 }
 
+.pageHeader, .hintP {
+  background-color: white;
+  padding: 8px 10px 10px;
+}
+
 .pageHeader {
+  /* justify-self: ; */
   overflow-y: hidden;
   font-family: 'Great Vibes', cursive;
   line-height: 3rem;
   text-decoration: underline overline solid #333;
   letter-spacing: 3.5px;
+  font-size: xx-large;
   font-weight: bolder;
 }
 
 .hintP {
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.8rem;
-  font-family: 'Indie Flower', cursive;
-  font-weight: bold;
-  word-spacing: 0.4rem;
-  letter-spacing: 0.08rem;
+  font-family: 'Pacifico', cursive;
+  font-weight: lighter;
+  /* word-spacing: 0.4rem; */
+  letter-spacing: 0.1rem;
   /* padding-top: 1rem; */
   /* padding-bottom: 2rem; */
-  padding-left: 10rem;
-  padding-right: 10rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  display: inline-block;
+  width: fit-content;
 }
 
-#bg-image1, #bg-image2, #bg-image3 {
-  background-size: cover;
+.hintSection {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#bg-image1, #bg-image2, #bg-image3, #bg-image4, #bg-image5, #bg-image6, #bg-image7, #bg-image8 {
+  width: 100%;
+  height: 100%;
   background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-
-/* #bg-image3 {
-  background-image: url(img/card.jpeg);
-}
-
-#bg-image2 {
-  background-image: url(img/balloons.jpeg);
+  background-size: cover;
+  /* background-repeat: no-repeat; */
 }
 
 #bg-image1 {
-  background-image: url(img/gifts.jpeg);
-} */
+  background-image: url(./assets/Ani/chayxe.png);
+  background-size: 90% 130%;
+  background-position: -10% 87%; 
+}
+
+#bg-image2 {
+  background-image: url(./assets/Ani/first.jpg);
+}
+
+#bg-image3 {
+  background-image: url(./assets/Ani/chechchi.jpeg);
+  background-size: contain;
+}
+
+#bg-image4 {
+  background-image: url(./assets/Ani/santruong.jpeg);
+}
+
+#bg-image5 {
+  background-image: url(./assets/Ani/hun.jpg);
+  background-size: 100% 150%;
+  background-position: 0% 10%;
+}
+
+#bg-image6 {
+  background-image: url(./assets/Ani/kyyeu.jpg);
+}
+
+#bg-image7 {
+  background-image: url(./assets/Ani/daihoc.png);
+}
+
+#bg-image8 {
+  background-image: url(./assets/ultra_usagyuuun_22.png);
+  background-size: auto;
+}
+
+#bg-image9 {
+  background-image: url(./assets/heart.jpg);
+  background-size: 100% 115%;
+  background-position: 0% 20%;
+}
 
 
 /* Message */

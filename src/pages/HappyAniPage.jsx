@@ -79,15 +79,17 @@ const HappyAniPage = () => {
     
 
     return (
-        <div style={{display: "inline-block", background : "white", marginTop: "1%"}}>
-            {code.codeLines.length === 0 ? <h1>Empty code</h1> : 
-                <div id="code">
-                    {code.codeLines.map(creatCodeLine)}
-                </div>
-            }
-            {/* <button onClick={()=>console.log(re_render)}>Log re-render</button> */}
-            <img src={guitarboy} style={{marginTop: "3%"}}  onClick={() => navigate("/screen3")} alt="guitar boy"/>
-        </div>
+        // <div style={{height:"100%", width: "100%", backgroundColor:}}>
+            <div style={{display: "inline-block", background : "white", backgroundSize: "cover", marginTop: "1%"}}>
+                {code.codeLines.length === 0 ? <h1>Empty code</h1> : 
+                    <div id="code">
+                        {code.codeLines.map(creatCodeLine)}
+                    </div>
+                }
+                {/* <button onClick={()=>console.log(re_render)}>Log re-render</button> */}
+                <img src={guitarboy} style={{marginTop: "3%"}}  onClick={() => navigate("/screen3")} alt="guitar boy"/>
+            </div>
+        // </div>
     );
 }
 
