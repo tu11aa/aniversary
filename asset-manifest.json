@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/aniversary/static/css/main.e87bdb32.css",
+    "main.js": "/aniversary/static/js/main.66b44c93.js",
+    "static/media/daihoc.png": "/aniversary/static/media/daihoc.16758d65bfc6e182a987.png",
+    "static/media/hun.jpg": "/aniversary/static/media/hun.9d7ab2bef880d0ef6057.jpg",
+    "static/media/received_jpeg": "/aniversary/static/media/received_2474496659431846.9d103bba7d0c7416ae7e.jpeg",
+    "static/media/first.jpg": "/aniversary/static/media/first.ac4a4384937973dc0900.jpg",
+    "static/media/kyyeu.jpg": "/aniversary/static/media/kyyeu.979cd466f5f3c1c79949.jpg",
+    "static/media/chayxe.png": "/aniversary/static/media/chayxe.4e250f409c6011273103.png",
+    "static/media/hihi.jpeg": "/aniversary/static/media/hihi.a867e8f0a858cdb01509.jpeg",
+    "static/media/Screenshot_20200120-192158.png": "/aniversary/static/media/Screenshot_20200120-192158.883f0c2cbb2138775755.png",
+    "static/media/santruong.jpeg": "/aniversary/static/media/santruong.d0077f9753989386a3be.jpeg",
+    "static/media/quansu.jpg": "/aniversary/static/media/quansu.e7eeca80db483c37226e.jpg",
+    "static/media/heart.jpg": "/aniversary/static/media/heart.11666a79115728fcb7c0.jpg",
+    "static/media/received_506796643294369.jpeg": "/aniversary/static/media/received_506796643294369.802c12f4a336401ffd38.jpeg",
+    "static/media/guitarboy.gif": "/aniversary/static/media/guitarboy.5e720ee56f3d866657bf.gif",
+    "static/media/chechchi.jpeg": "/aniversary/static/media/chechchi.071bf43c2c131782be74.jpeg",
+    "static/media/ultra_usagyuuun_22.png": "/aniversary/static/media/ultra_usagyuuun_22.c8c5acf9916e01211fc1.png",
+    "index.html": "/aniversary/index.html",
+    "main.e87bdb32.css.map": "/aniversary/static/css/main.e87bdb32.css.map",
+    "main.66b44c93.js.map": "/aniversary/static/js/main.66b44c93.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e87bdb32.css",
+    "static/js/main.66b44c93.js"
+  ]
+}
