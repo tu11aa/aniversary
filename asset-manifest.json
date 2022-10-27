@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/aniversary/static/css/main.e87bdb32.css",
-    "main.js": "/aniversary/static/js/main.66b44c93.js",
+    "main.css": "/aniversary/static/css/main.dcdf2e71.css",
+    "main.js": "/aniversary/static/js/main.768a8bb7.js",
     "static/media/daihoc.png": "/aniversary/static/media/daihoc.16758d65bfc6e182a987.png",
     "static/media/hun.jpg": "/aniversary/static/media/hun.9d7ab2bef880d0ef6057.jpg",
     "static/media/received_jpeg": "/aniversary/static/media/received_2474496659431846.9d103bba7d0c7416ae7e.jpeg",
@@ -18,11 +18,11 @@
     "static/media/chechchi.jpeg": "/aniversary/static/media/chechchi.071bf43c2c131782be74.jpeg",
     "static/media/ultra_usagyuuun_22.png": "/aniversary/static/media/ultra_usagyuuun_22.c8c5acf9916e01211fc1.png",
     "index.html": "/aniversary/index.html",
-    "main.e87bdb32.css.map": "/aniversary/static/css/main.e87bdb32.css.map",
-    "main.66b44c93.js.map": "/aniversary/static/js/main.66b44c93.js.map"
+    "main.dcdf2e71.css.map": "/aniversary/static/css/main.dcdf2e71.css.map",
+    "main.768a8bb7.js.map": "/aniversary/static/js/main.768a8bb7.js.map"
   },
   "entrypoints": [
-    "static/css/main.e87bdb32.css",
-    "static/js/main.66b44c93.js"
+    "static/css/main.dcdf2e71.css",
+    "static/js/main.768a8bb7.js"
   ]
 }
