@@ -23,7 +23,7 @@ const FlippingPage = () => {
       <div className="inside">
         <p>Tên đăng nhập tên tui cộng với ngiu é</p>
         <p>Còn mật khẩu thì quen thuộc lúm, tự mò ik hía hía</p>
-        <h1 onClick={()=>navigate("/login")}>&#127873;</h1>
+        <h1 onClick={()=>navigate("/login")} style={{cursor: "pointer"}}>&#127873;</h1>
       </div>
     </div>
   )

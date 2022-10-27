@@ -11,10 +11,14 @@ const Album = () => {
         original: image,
     }))
 
-    return <div>
-        <ImageGallery  autoPlay={true} items={images} infinite={true} showThumbnails={false}/>
-        {/* <button onClick={()=>console.log(importAll(r))}>Demo</button> */}
-    </div>
+    return (
+        <>
+            <h1 className='album'>Hết gùi, xem Album đỡ đuyyyy</h1>
+            <div>
+                <ImageGallery  autoPlay={true} items={images} infinite={true} showThumbnails={false}/>
+            </div>
+        </>
+    )
 }
 
 export default Album
