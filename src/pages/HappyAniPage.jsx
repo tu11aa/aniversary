@@ -20,7 +20,7 @@ const HappyAniPage = () => {
 
     const initialState = {
         plainCodeLines : [
-            "// Hôm nay, ngày 5/11/2019 một trong những ngày không bao giờ quên trong đời anh.",
+            "// Hôm nay, ngày 5/11/2022 một trong những ngày không bao giờ quên trong đời anh.",
             "// Vì thế anh tạo ra những dòng code này, hãy đọc và cảm nhận tình cảm anh dành cho em.",
             "\n",
             "import", " Girl ", "form ", `"You"`,
